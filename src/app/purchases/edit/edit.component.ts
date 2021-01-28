@@ -30,7 +30,7 @@ export class EditComponent implements OnInit {
       this.editForm = new FormGroup(
         {
           name: new FormControl({ value: this.currentPurchase.name, disabled: this.disabled}, [Validators.required]),
-          amount: new FormControl({ value: this.currentPurchase.amount, disabled: this.disabled}, [Validators.required, Validators.pattern('^[1-9]+$')]),
+          amount: new FormControl({ value: this.currentPurchase.amount, disabled: this.disabled}, [Validators.required, Validators.pattern('^[0-9]+$')]),
           state: new FormControl({ value: this.currentPurchase.state, disabled: this.disabled}, [Validators.required])
         }
       )
